@@ -497,7 +497,7 @@ func GetPostsUser(id string,res http.ResponseWriter, req *http.Request) string{
         
 
         //arr := config.Pagination(skip,size,page)
-        if(page==0) {size = len(results)}
+        if(page==0 && size==10) {size = len(results)}
 
         if(page>0){
           skip = (len(results)/size)*(page-1)

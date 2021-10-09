@@ -47,16 +47,7 @@ func Uid() string{
 	return fmt.Sprintf("%X",b[:])
 }
 
-func Pagination(skip int,size int, l int ) []int{
-	var limit int = skip+size
-	var start int = skip
 
-	if skip+size>l { limit = l }
-	  
-	if skip>l {start = l}
-
-	return []int{start,limit}
-}
 
 
 
